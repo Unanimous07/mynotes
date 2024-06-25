@@ -93,6 +93,12 @@ late final TextEditingController _email;
                   },
                   child: const Text('LogIn'),
                 ),
+
+                TextButton(
+                  onPressed: (){
+                      Navigator.of(context).pushNamedAndRemoveUntil('/register/', (route) => false);
+                  }, 
+                  child: const Text('Not Registered yet? Register here!'))
               ],
             );
 
