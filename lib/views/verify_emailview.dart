@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mynotes/firebase_options.dart';
+//import 'package:mynotes/firebase_options.dart';
 
 
 class VerifyEmail extends StatefulWidget {
@@ -25,8 +25,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 onPressed: () async {
                     final user = FirebaseAuth.instance.currentUser;
                     await user?.sendEmailVerification();
-                    //await Navigator.of(context).pushNamedAndRemoveUntil('/Login/', (route) => false);
-                    Navigator.pushNamed(context, '/login/');
+
                 }, 
                 child: const Text('Send verification email'))
             ]
